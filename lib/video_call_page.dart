@@ -27,9 +27,9 @@ class Meeting extends StatefulWidget {
 
 class _MeetingState extends State<Meeting> {
   final serverText = TextEditingController();
-  final roomText = TextEditingController(text: "plugintestroom");
+  final roomText = TextEditingController(text: "room_1");
   final subjectText = TextEditingController(text: "My Plugin Test Meeting");
-  final nameText = TextEditingController(text: "Plugin Test User");
+  final nameText = TextEditingController(text: "matu1");
   final emailText = TextEditingController(text: "fake@email.com");
   final iosAppBarRGBAColor =
       TextEditingController(text: "#0080FF80"); //transparent blue
@@ -83,7 +83,7 @@ class _MeetingState extends State<Meeting> {
                                 width: width * 0.60 * 0.70,
                                 height: width * 0.60 * 0.70,
                                 child: JitsiMeetConferencing(
-                                  extraJS: [
+                                  extraJS: const [
                                     // extraJs setup example
                                     '<script>function echo(){console.log("echo!!!")};</script>',
                                     '<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>'
@@ -103,7 +103,7 @@ class _MeetingState extends State<Meeting> {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 16.0,
           ),
           /*  TextField(
@@ -118,76 +118,76 @@ class _MeetingState extends State<Meeting> {
           ), */
           TextField(
             controller: roomText,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
+            decoration: const InputDecoration(
+              border: const OutlineInputBorder(),
               labelText: "Room",
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 14.0,
           ),
           TextField(
             controller: subjectText,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: "Subject",
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 14.0,
           ),
           TextField(
             controller: nameText,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: "Display Name",
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 14.0,
           ),
           TextField(
             controller: emailText,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: "Email",
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 14.0,
           ),
           TextField(
             controller: iosAppBarRGBAColor,
-            decoration: InputDecoration(
-                border: OutlineInputBorder(),
+            decoration: const InputDecoration(
+                border: const OutlineInputBorder(),
                 labelText: "AppBar Color(IOS only)",
                 hintText: "Hint: This HAS to be in HEX RGBA format"),
           ),
-          SizedBox(
+          const SizedBox(
             height: 14.0,
           ),
           CheckboxListTile(
-            title: Text("Audio Only"),
+            title: const Text("Audio Only"),
             value: isAudioOnly,
             onChanged: _onAudioOnlyChanged,
           ),
-          SizedBox(
+          const SizedBox(
             height: 14.0,
           ),
           CheckboxListTile(
-            title: Text("Audio Muted"),
+            title: const Text("Audio Muted"),
             value: isAudioMuted,
             onChanged: _onAudioMutedChanged,
           ),
-          SizedBox(
+          const SizedBox(
             height: 14.0,
           ),
           CheckboxListTile(
-            title: Text("Video Muted"),
+            title: const Text("Video Muted"),
             value: isVideoMuted,
             onChanged: _onVideoMutedChanged,
           ),
-          Divider(
+          const Divider(
             height: 48.0,
             thickness: 2.0,
           ),
@@ -198,7 +198,8 @@ class _MeetingState extends State<Meeting> {
               onPressed: () {
                 _joinMeeting();
               },
-              child: Text(
+              // ignore: sort_child_properties_last
+              child:  const Text(
                 "Join Meeting",
                 style: TextStyle(color: Colors.white),
               ),
@@ -207,7 +208,7 @@ class _MeetingState extends State<Meeting> {
                       MaterialStateColor.resolveWith((states) => Colors.blue)),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 48.0,
           ),
         ],
