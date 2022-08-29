@@ -74,39 +74,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
-  jitsi_meet:
+  jitsi_meet_wrapper:
     dependency: "direct main"
     description:
-      name: jitsi_meet
+      name: jitsi_meet_wrapper
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.0.0"
-  jitsi_meet_platform_interface:
+    version: "0.0.5"
+  jitsi_meet_wrapper_platform_interface:
     dependency: transitive
     description:
-      name: jitsi_meet_platform_interface
+      name: jitsi_meet_wrapper_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0"
-  jitsi_meet_web_plugin:
-    dependency: transitive
-    description:
-      name: jitsi_meet_web_plugin
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0"
-  js:
-    dependency: transitive
-    description:
-      name: js
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.6.4"
+    version: "0.0.3"
   lints:
     dependency: transitive
     description:

@@ -12,6 +12,8 @@ abstract class SomePage extends StatelessWidget {
 }
 
 class SecondPage extends SomePage {
+  const SecondPage({Key? key}) : super(key: key);
+
   @override
   Widget buildUI(BuildContext context) {
     // TODO: implement buildUI
